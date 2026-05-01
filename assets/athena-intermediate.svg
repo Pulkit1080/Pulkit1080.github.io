@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#fafaf7"></rect>
+  <text x="60" y="60" font-size="22" font-weight="700" fill="#111827">AWS Athena · S3 intermediate-table pattern</text>
+  <text x="60" y="86" font-size="13" fill="#6b7280">Materialized mid-layer tables so QA teams skip re-running heavy joins — validation turnaround cut ~50%</text>
+  
+  <g>
+    <rect x="60" y="160" width="340" height="660" fill="#ffffff" stroke="#e5e7eb"></rect>
+    <text x="230" y="200" font-size="16" font-weight="700" fill="#111827" text-anchor="middle">S3 · Raw zone</text>
+    
+      <rect x="90" y="240" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="272" font-size="13" fill="#111827">sales_raw/</text>
+      <text x="110" y="290" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+      <rect x="90" y="316" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="348" font-size="13" fill="#111827">incentives_raw/</text>
+      <text x="110" y="366" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+      <rect x="90" y="392" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="424" font-size="13" fill="#111827">hcp_master/</text>
+      <text x="110" y="442" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+      <rect x="90" y="468" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="500" font-size="13" fill="#111827">prod_master/</text>
+      <text x="110" y="518" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+      <rect x="90" y="544" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="576" font-size="13" fill="#111827">rep_master/</text>
+      <text x="110" y="594" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+      <rect x="90" y="620" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="652" font-size="13" fill="#111827">channel_logs/</text>
+      <text x="110" y="670" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+      <rect x="90" y="696" width="280" height="60" fill="#f3f4f6" stroke="#d1d5db"></rect>
+      <text x="110" y="728" font-size="13" fill="#111827">quota_plans/</text>
+      <text x="110" y="746" font-size="11" fill="#6b7280">parquet · partitioned by dt</text>
+    
+  </g>
+  
+  <g>
+    <rect x="620" y="160" width="360" height="660" fill="#ffffff" stroke="#7c3aed" stroke-width="2"></rect>
+    <text x="800" y="200" font-size="16" font-weight="700" fill="#6b21a8" text-anchor="middle">S3 · Intermediate (NEW)</text>
+    <text x="800" y="222" font-size="11" fill="#6b7280" text-anchor="middle">pre-joined · pre-aggregated · refreshed nightly</text>
+    
+      <rect x="650" y="246" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="274" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_sales_hcp_daily</text>
+      <text x="800" y="292" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+      <rect x="650" y="322" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="350" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_trx_nrx_wkly</text>
+      <text x="800" y="368" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+      <rect x="650" y="398" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="426" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_incentive_accrual</text>
+      <text x="800" y="444" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+      <rect x="650" y="474" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="502" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_share_region</text>
+      <text x="800" y="520" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+      <rect x="650" y="550" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="578" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_pipeline_stage</text>
+      <text x="800" y="596" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+      <rect x="650" y="626" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="654" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_rep_productivity</text>
+      <text x="800" y="672" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+      <rect x="650" y="702" width="300" height="60" fill="#f3e8ff" stroke="#a78bfa"></rect>
+      <text x="800" y="730" font-size="13" fill="#6b21a8" text-anchor="middle" font-weight="600">int_plan_vs_actual</text>
+      <text x="800" y="748" font-size="11" fill="#6b7280" text-anchor="middle">CTAS · ~70% scan reduction</text>
+    
+  </g>
+  
+  <g>
+    <rect x="1200" y="160" width="340" height="660" fill="#ffffff" stroke="#e5e7eb"></rect>
+    <text x="1370" y="200" font-size="16" font-weight="700" fill="#111827" text-anchor="middle">Consumers</text>
+    
+      <rect x="1230" y="240" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="274" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">QlikView apps (15)</text>
+    
+      <rect x="1230" y="316" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="350" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">Tableau workbooks (4)</text>
+    
+      <rect x="1230" y="392" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="426" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">Ad-hoc SQL QA</text>
+    
+      <rect x="1230" y="468" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="502" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">Data-validation suite</text>
+    
+      <rect x="1230" y="544" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="578" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">Ops dashboards</text>
+    
+      <rect x="1230" y="620" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="654" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">Leadership scorecards</text>
+    
+      <rect x="1230" y="696" width="280" height="60" fill="#ecfdf5" stroke="#6ee7b7"></rect>
+      <text x="1370" y="730" font-size="13" fill="#065f46" text-anchor="middle" font-weight="600">Auto-regression tests</text>
+    
+  </g>
+  
+  
+    <line x1="400" y1="270" x2="620" y2="276" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="276" x2="1200" y2="270" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+    <line x1="400" y1="346" x2="620" y2="352" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="352" x2="1200" y2="346" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+    <line x1="400" y1="422" x2="620" y2="428" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="428" x2="1200" y2="422" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+    <line x1="400" y1="498" x2="620" y2="504" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="504" x2="1200" y2="498" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+    <line x1="400" y1="574" x2="620" y2="580" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="580" x2="1200" y2="574" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+    <line x1="400" y1="650" x2="620" y2="656" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="656" x2="1200" y2="650" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+    <line x1="400" y1="726" x2="620" y2="732" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+    <line x1="980" y1="732" x2="1200" y2="726" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"></line>
+  
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6b7280"></path></marker></defs>
+  
+  <g transform="translate(60, 900)">
+    <rect width="1480" height="64" fill="#111827"></rect>
+    <text x="24" y="28" font-size="12" fill="#9ca3af">OUTCOME</text>
+    <text x="24" y="50" font-size="14" fill="#86efac">QA teams validate against intermediate tables · ~50% faster SQL turnaround · 50+ SLA defects closed · repeatable test harness</text>
+  </g>
+</svg>

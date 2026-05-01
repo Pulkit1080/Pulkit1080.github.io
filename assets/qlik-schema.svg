@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, system-ui, sans-serif">
+  <rect width="800" height="500" fill="#fafaf9"></rect>
+  <text x="30" y="36" fill="#1f2937" font-size="14" font-weight="600">QlikView · Sales Performance — Star Schema</text>
+  <text x="30" y="54" fill="#6b7280" font-size="10">15 dashboards · 1,000+ enhancements · ~50% faster validation via S3 + Athena intermediate tables</text>
+
+  
+  <g transform="translate(310,210)">
+    <rect width="180" height="80" fill="#1f2937" stroke="#111827"></rect>
+    <text x="90" y="22" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">FACT_SALES</text>
+    <line x1="14" y1="32" x2="166" y2="32" stroke="#374151"></line>
+    <text x="14" y="46" fill="#9ca3af" font-size="9">date_id · prod_id</text>
+    <text x="14" y="58" fill="#9ca3af" font-size="9">geo_id · cust_id · rep_id</text>
+    <text x="14" y="70" fill="#fde68a" font-size="9">revenue · units · scripts</text>
+  </g>
+
+  
+  <g transform="translate(60,80)">
+    <rect width="140" height="68" fill="#fff" stroke="#cbd5e1"></rect>
+    <text x="70" y="20" fill="#1e3a8a" font-size="10" font-weight="600" text-anchor="middle">DIM_DATE</text>
+    <line x1="10" y1="28" x2="130" y2="28" stroke="#e2e8f0"></line>
+    <text x="10" y="42" fill="#475569" font-size="9">date_id</text>
+    <text x="10" y="54" fill="#475569" font-size="9">year · qtr · month</text>
+    <text x="10" y="64" fill="#475569" font-size="9">fiscal_period</text>
+  </g>
+  <g transform="translate(600,80)">
+    <rect width="140" height="68" fill="#fff" stroke="#cbd5e1"></rect>
+    <text x="70" y="20" fill="#1e3a8a" font-size="10" font-weight="600" text-anchor="middle">DIM_PRODUCT</text>
+    <line x1="10" y1="28" x2="130" y2="28" stroke="#e2e8f0"></line>
+    <text x="10" y="42" fill="#475569" font-size="9">prod_id · brand</text>
+    <text x="10" y="54" fill="#475569" font-size="9">therapy_area</text>
+    <text x="10" y="64" fill="#475569" font-size="9">indication · sku</text>
+  </g>
+  <g transform="translate(60,360)">
+    <rect width="140" height="68" fill="#fff" stroke="#cbd5e1"></rect>
+    <text x="70" y="20" fill="#1e3a8a" font-size="10" font-weight="600" text-anchor="middle">DIM_GEOGRAPHY</text>
+    <line x1="10" y1="28" x2="130" y2="28" stroke="#e2e8f0"></line>
+    <text x="10" y="42" fill="#475569" font-size="9">geo_id · region</text>
+    <text x="10" y="54" fill="#475569" font-size="9">district · territory</text>
+    <text x="10" y="64" fill="#475569" font-size="9">zip · hcp_zone</text>
+  </g>
+  <g transform="translate(600,360)">
+    <rect width="140" height="68" fill="#fff" stroke="#cbd5e1"></rect>
+    <text x="70" y="20" fill="#1e3a8a" font-size="10" font-weight="600" text-anchor="middle">DIM_REP</text>
+    <line x1="10" y1="28" x2="130" y2="28" stroke="#e2e8f0"></line>
+    <text x="10" y="42" fill="#475569" font-size="9">rep_id · name</text>
+    <text x="10" y="54" fill="#475569" font-size="9">manager_id</text>
+    <text x="10" y="64" fill="#475569" font-size="9">tenure · quota</text>
+  </g>
+  <g transform="translate(330,40)">
+    <rect width="140" height="68" fill="#fff" stroke="#cbd5e1"></rect>
+    <text x="70" y="20" fill="#1e3a8a" font-size="10" font-weight="600" text-anchor="middle">DIM_CUSTOMER</text>
+    <line x1="10" y1="28" x2="130" y2="28" stroke="#e2e8f0"></line>
+    <text x="10" y="42" fill="#475569" font-size="9">cust_id · hcp_npi</text>
+    <text x="10" y="54" fill="#475569" font-size="9">specialty · tier</text>
+    <text x="10" y="64" fill="#475569" font-size="9">decile · segment</text>
+  </g>
+  <g transform="translate(330,400)">
+    <rect width="140" height="60" fill="#fff7ed" stroke="#fb923c" stroke-dasharray="4,3"></rect>
+    <text x="70" y="20" fill="#9a3412" font-size="10" font-weight="600" text-anchor="middle">S3 · ATHENA</text>
+    <text x="70" y="36" fill="#9a3412" font-size="9" text-anchor="middle">intermediate</text>
+    <text x="70" y="48" fill="#9a3412" font-size="9" text-anchor="middle">validation tables</text>
+  </g>
+
+  
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <line x1="200" y1="114" x2="310" y2="230"></line>
+    <line x1="600" y1="114" x2="490" y2="230"></line>
+    <line x1="200" y1="394" x2="310" y2="270"></line>
+    <line x1="600" y1="394" x2="490" y2="270"></line>
+    <line x1="400" y1="108" x2="400" y2="210"></line>
+    <line x1="400" y1="400" x2="400" y2="290" stroke="#fb923c" stroke-dasharray="4,3"></line>
+  </g>
+</svg>
