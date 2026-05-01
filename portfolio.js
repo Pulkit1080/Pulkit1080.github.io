@@ -72,9 +72,9 @@ const PROJECTS = [
     ],
     links: [
       { label: "R1 Deck · FableAI", href: "assets/KeepinItCaseual_DeansCup_Round1.pdf" },
-      { label: "R2 Deck · oneRBC", href: "assets/DeansCup_R2_KeepinItCaseual_Deck.pptx", pptx: true },
-      { label: "R3 Deck · Blanc Labs", href: "assets/DeansCup_R3_KeepinItCaseual_Deck.pptx", pptx: true },
-      { label: "Finale Deck · Optimus", href: "assets/DeansCup_Finale_KeepinItCaseual_Deck.pptx", pptx: true }
+      { label: "R2 Deck · oneRBC", href: "assets/DeansCup_R2_KeepinItCaseual_Deck.pdf" },
+      { label: "R3 Deck · Blanc Labs", href: "assets/DeansCup_R3_KeepinItCaseual_Deck.pdf" },
+      { label: "Finale Deck · Optimus", href: "assets/DeansCup_Finale_KeepinItCaseual_Deck.pdf" }
     ]
   },
   {
@@ -171,12 +171,7 @@ if (projList) {
       : '';
 
     const linksHTML = p.links
-      ? `<div class="proj-links">${p.links.map(l => {
-          const url = l.pptx
-            ? 'https://view.officeapps.live.com/op/view.aspx?src=' + encodeURIComponent(window.location.origin + '/' + l.href)
-            : l.href;
-          return `<a href="${url}" target="_blank" rel="noopener">${l.label} &#8599;</a>`;
-        }).join('')}</div>`
+      ? `<div class="proj-links">${p.links.map(l => `<a href="${l.href}" target="_blank" rel="noopener">${l.label} &#8599;</a>`).join('')}</div>`
       : '';
 
     card.innerHTML = `
