@@ -1,14 +1,14 @@
 // ─── Data ────────────────────────────────────────────────────
 const EXPERIENCE = [
   {
-    when: "Jan 2026 - April 2026",
+    when: "Jan 2026 - Present",
     role: "Business Ops & Strategy Intern",
     org: "Biiibo Inc. · Toronto",
     tags: ["Python", "ERP Next", "Automation", "Category strategy"],
     bullets: [
-      "Built 20+ Python scripts for ERP image uploads, bulk assignments, and pricing validation across 5,000+ SKUs, cutting manual processing overhead.",
-      "Designed a 4-level product taxonomy for 2,200+ items across 15+ categories in ERPNext, enabling faceted filtering by material, dimensions, and brand.",
-      "Resolved SKU mismatches, pricing gaps, and item group errors across 1,600+ products by generating structured audit reports, improving ERP-to-website data accuracy.",
+      "Reduced catalogue processing time by 35% by building Python scripts for ERP image upload and validation.",
+      "Identified 64% zero-sales SKUs and key ABC revenue drivers by analyzing 2 years of sales data using Python, enabling portfolio rationalization.",
+      "Improved product classification accuracy by developing a structured category mapping system covering multiple categories across 100+ products.",
     ],
   },
   {
@@ -73,7 +73,7 @@ const PROJECTS = [
       "assets/slide-optimus-cdm.png",
     ],
     problem:
-      "Four cases across the Dean's Cup: Agentic AI in financial services (R1), Canadian banking M&A (R2), AI-enabled lending (R3), and consulting strategy (Finale, the only live round).",
+      "Four cases across the Dean's Cup 2025-26: Agentic AI in financial services (R1), Canadian banking M&A (R2), AI-enabled lending (R3), and consulting strategy (Finale, the only live round).",
     approach:
       "Each case: 4-person team, senior industry judges, compressed sprint. Won R1; top-3 every round.",
     metrics: [
@@ -104,7 +104,7 @@ const PROJECTS = [
   {
     cat: "analytics",
     title: "Commercial KPI Tableau Suite",
-    desc: "4 enterprise dashboards for pipeline, KPIs, and market share at a top-10 US pharma.",
+    desc: "4 enterprise dashboards used by global commercial teams to track KPIs, pipeline performance, and revenue trends.",
     meta: "ZS · Pharma · 2024",
     img: "assets/tableau-mock.svg",
     contain: false,
@@ -122,7 +122,7 @@ const PROJECTS = [
   {
     cat: "analytics",
     title: "QlikView Testing Optimization",
-    desc: "Cut validation time by ~50% with S3 + Athena intermediate tables across 1,000+ enhancements.",
+    desc: "Cut SQL validation time by ~50% by automating queries and optimizing AWS Athena workflows.",
     meta: "ZS · 2020–23",
     img: "assets/qlik-dashboard.png",
     contain: false,
@@ -140,7 +140,7 @@ const PROJECTS = [
   {
     cat: "product",
     title: "Biiibo Catalogue Automation",
-    desc: "Python + ERP Next pipeline that cut catalogue ops time by 35%.",
+    desc: "Automated ERP workflows, built a scalable product taxonomy, and improved data accuracy across thousands of SKUs using Python and structured audits.",
     meta: "Biiibo · 2026",
     img: "assets/biiibo-storefront.png",
     contain: false,
@@ -169,7 +169,7 @@ const WINS = [
     rank: "1",
     sup: "st",
     where: "Ivey Soccer Tournament",
-    detail: "Captain · Schulich, 2025",
+    detail: "Captain · Schulich, 2026",
     img: "assets/soccer-team.jpg",
   },
   {
