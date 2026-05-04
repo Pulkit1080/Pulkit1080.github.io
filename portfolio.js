@@ -105,7 +105,7 @@ const PROJECTS = [
     cat: "analytics",
     title: "Commercial KPI Tableau Suite",
     desc: "4 enterprise dashboards used by global commercial teams to track KPIs, pipeline performance, and revenue trends.",
-    meta: "ZS · Pharma · 2024",
+    meta: "ZS · Pharma · 2020 — 2024",
     img: "assets/tableau-mock.svg",
     contain: false,
     problem:
@@ -123,7 +123,7 @@ const PROJECTS = [
     cat: "analytics",
     title: "QlikView Testing Optimization",
     desc: "Cut SQL validation time by ~50% by automating queries and optimizing AWS Athena workflows.",
-    meta: "ZS · 2020–23",
+    meta: "ZS · Pharma · 2020 — 2024",
     img: "assets/qlik-dashboard.png",
     contain: false,
     problem:
@@ -140,7 +140,7 @@ const PROJECTS = [
   {
     cat: "product",
     title: "Biiibo Catalogue Automation",
-    desc: "Automated ERP workflows, built a scalable product taxonomy, and improved data accuracy across thousands of SKUs using Python and structured audits.",
+    desc: "Python + ERPNext pipeline that automated catalogue ops and improved data accuracy across 100+ SKUs.",
     meta: "Biiibo · 2026",
     img: "assets/biiibo-storefront.png",
     contain: false,
